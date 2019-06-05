@@ -30,8 +30,8 @@ Things you may want to cover:
 
 |column|type|options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key:true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key:true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -69,8 +69,8 @@ has_many :members
 |------|----|-------|
 |body|text|add_index|
 |image|string|add_index|
-|group_id|integer|null: false,foregn_key:true|
-|user_id|integer|null: false,foregn_key:true|
+|group|references|null: false,foregn_key:true|
+|user|references|null: false,foregn_key:true|
 
 ### Association
 - belongs_to :group
