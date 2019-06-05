@@ -43,7 +43,7 @@ Things you may want to cover:
 
 |column|type|options|
 |------|----|-------|
-|name|string|null: false, add_index|
+|name|string|null: false, index: true|
 |e-mail|string|null: false, unique: true|
 
 ### Association
@@ -67,8 +67,8 @@ has_many :members
 
 |column|type|options|
 |------|----|-------|
-|body|text|add_index|
-|image|string|add_index|
+|body|text|index: true|
+|image|string|index: true|
 |group|references|null: false,foregn_key:true|
 |user|references|null: false,foregn_key:true|
 
