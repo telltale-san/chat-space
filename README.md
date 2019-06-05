@@ -49,6 +49,7 @@ Things you may want to cover:
 ### Association
 has_many :groups, thrrough: :members
 has_many :messages
+has_many :members
 
 ## groupsテーブル
 
@@ -59,6 +60,7 @@ has_many :messages
 ### Association
 has_many :users, through: :members
 has_many :messages
+has_many :members
 
 
 ## messagesテーブル
