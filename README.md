@@ -67,8 +67,8 @@ has_many :members
 
 |column|type|options|
 |------|----|-------|
-|body|text|index: true|
-|image|string|index: true|
+|body|text||
+|image|string||
 |group|references|null: false,foregn_key:true|
 |user|references|null: false,foregn_key:true|
 
