@@ -5,19 +5,21 @@
   width:100%;
   text-align: center;
   color: #ffffff;
+
 }
 
 .side-bar{
+  float: left;
   width: 300px;
   height: 100vh;
   color: #ffffff;
   font-weight: bold;
   background-color: #2f3e51;
   .side-bar__group-name{
-    height: 82px;
+    height: 100px;
     background-color: #253141;
     padding: 0 20px;
-    line-height: 82px;
+    line-height: 100px;
     font-size: 16px;
     .side-bar__group-name__icon{
 
@@ -36,24 +38,52 @@
 
 
 .chat{
+  float: left;
+  height: 100vh;
+  width: calc(100vw - 300px);
   .chat__current-group{
-    .chat__current-group__member{
-      
-    } 
+    height: 100px;
+    border-bottom: solid 1px #eeeeee;
+    padding: 0 40px;
+    .chat__current-group__name{
+      font-size: 20px;
+      color: #333333;
+      padding: 35px 0 15px 0;
+      float: left;
+    }
 
     .chat__current-group__edit-btn{
-
+      float: right;
+      margin-top: 28px;
+      padding: 0 20px;
+      height: 40px;
+      line-height: 40px;
+      color: #38aef0;
+      border: #38aef0 solid 1px;
     }
+    .chat__current-group__member{
+      clear: both;
+      font-size: 12px;
+      color: #999999;
+    } 
   }
 
 
   .chat__main{
     .chat__main__message{
+      .chat__main__message__name{
+        font-size: 12px;
+        color: #999999;
+      }
+      
       .chat__main__message--gray{
 
       }
-    }
-    
+
+      .chat__main__message__text{
+
+      }
+    } 
   }
 
   .chat__send-message{
