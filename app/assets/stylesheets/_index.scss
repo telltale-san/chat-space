@@ -31,6 +31,36 @@
       padding-top: 5px;
     }
   }
+}
 
 
+
+.chat{
+  .chat__current-group{
+    .chat__current-group__member{
+      
+    } 
+
+    .chat__current-group__edit-btn{
+
+    }
+  }
+
+
+  .chat__main{
+    .chat__main__message{
+      .chat__main__message--gray{
+
+      }
+    }
+    
+  }
+
+  .chat__send-message{
+    .chat__send-message__input{
+      .chat__send-message__input__send{
+
+      } 
+    }
+  }
 }
