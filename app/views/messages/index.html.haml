@@ -3,9 +3,13 @@
 
 
 .side-bar
-  .side-bar__group-name
+  .side-bar__user-name
     hello
-    .side-bar__group-name__icon
+    %ul.side-bar__user-name__icons
+      %li.side-bar__user-name__icons__new-group
+        %i.fa.fa-edit
+      %li.side-bar__user-name__icons__edit-user
+        %i.fa.fa-cog
 
   .side-bar__groups
     .side-bar__groups__list
@@ -43,4 +47,6 @@
 
   .chat__send-message
     .chat__send-message__input
+      .chat__send-message__input__text
+        input text
       .chat__send-message__input__send

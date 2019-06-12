@@ -15,15 +15,24 @@
   color: #ffffff;
   font-weight: bold;
   background-color: #2f3e51;
-  .side-bar__group-name{
+  .side-bar__user-name{
     width: 300px;
     height: 100px;
     background-color: #253141;
     padding: 0 20px;
     line-height: 100px;
     font-size: 16px;
-    .side-bar__group-name__icon{
-
+    .side-bar__user-name__icons{
+      display: inline;
+      float: right;
+      padding-right: 40px;
+      .side-bar__user-name__icons__new-group{
+        display: inline;
+      }
+      .side-bar__user-name__icons__edit-user{
+        display: inline;
+        }
+      }
     }
   }
   .side-bar__groups{
@@ -36,7 +45,7 @@
       }
     }
   }
-}
+
 
 
 
