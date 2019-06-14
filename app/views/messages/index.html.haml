@@ -4,7 +4,7 @@
 
 .side-bar
   .side-bar__user-name
-    hello
+    user_1
     .side-bar__user-name__icons
       = link_to "https://www.google.com", class: "side-bar__user-name__icons__new-group" do
         %i.fa.fa-edit
@@ -13,13 +13,21 @@
 
   .side-bar__groups
     .side-bar__groups__list
-      hello
+      group_1
       .side-bar__groups__list__message
         hello
     .side-bar__groups__list
-      ハロー
+      group_2
       .side-bar__groups__list__message
-        ハロー
+        goodbye
+    .side-bar__groups__list
+      group_2
+      .side-bar__groups__list__message
+        goodbye
+    .side-bar__groups__list
+      group_2
+      .side-bar__groups__list__message
+        goodbye
     
 
 .chat
@@ -45,8 +53,11 @@
         message
 
 
-  .chat__send-message
+  %form{class: "chat__send-message"}
     .chat__send-message__input
-      .chat__send-message__input__text
-        input text
-      .chat__send-message__input__send
+      .chat__send-message__input__box
+        %input{placeholder: "type a message",class:"chat__send-message__input__box__text", type: "text"}  
+        %label.chat__send-message__input__box__image
+          %i.fa.fa-image.fa-1x
+          %input.message-image{type: "file"}
+      %input.chat__send-message__input__send{type: "submit",value: "Send"}
