@@ -1,38 +1,8 @@
 .new-group-message
   グループを作成しました
 
+= render partial:"side-bar"
 
-.side-bar
-  .side-bar__user-name
-    user_1
-    .side-bar__user-name__icons
-      = link_to "https://www.google.com", class: "side-bar__user-name__icons__new-group" do
-        %i.fa.fa-edit
-      = link_to "https://www.google.com", class:"side-bar__user-name__icons__edit-user" do
-        %i.fa.fa-cog
-
-  .side-bar__groups
-    = link_to "messages#index" do    
-      .side-bar__groups__list
-        group_1
-        .side-bar__groups__list__message
-          hello
-    = link_to "messages#index" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    = link_to "messages#index" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    = link_to "messages#index" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    
 
 .chat
 
