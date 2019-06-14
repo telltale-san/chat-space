@@ -1,6 +1,6 @@
 
 
-.header{
+.new-group-message{
   background-color: #38aef0;
   width:100%;
   text-align: center;
@@ -14,7 +14,7 @@
   color: #ffffff;
   font-weight: bold;
   background-color: #2f3e51;
-  .side-bar__user-name{
+  &__user-name{
     width: 300px;
     height: 100px;
     background-color: #253141;
@@ -22,56 +22,55 @@
     box-sizing: border-box;
     line-height: 100px;
     font-size: 16px;
-    .side-bar__user-name__icons{
+  &__icons{
       display: inline;
       float: right;
-      .side-bar__user-name__icons__new-group{
+  &__new-group{
         display: inline;
         color: #ffffff;
         text-decoration: none;
       }
-      .side-bar__user-name__icons__edit-user{
+  &__edit-user{
         display: inline;
         color: #ffffff;
         }
       }
     }
-  }
-  .side-bar__groups{
+  
+  &__groups{
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    .side-bar__groups__list{
+    &__list{
       padding: 20px ;
       font-size: 15px;
       color: #ffffff;
-      .side-bar__groups__list__message{
+      &__message{
         font-size: 11px;
         padding-top: 5px;
         color: inherit;
       }
     }
   }
-
-
+}
 
 
 .chat{
   float: left;
   height: 100vh;
   width: calc(100vw - 300px);
-  .chat__current-group{
+  &__current-group{
     background-color: #ffffff;
     height: 100px;
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
-    .chat__current-group__name{
+    &__name{
       font-size: 20px;
       color: #333333;
       padding: 35px 0 15px 0;
       float: left;
     }
 
-    .chat__current-group__edit-btn{
+    &__edit-btn{
       float: right;
       margin-top: 28px;
       padding: 0 20px;
@@ -82,7 +81,7 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .chat__current-group__member{
+    &__member{
       clear: both;
       font-size: 12px;
       color: #999999;
@@ -90,29 +89,29 @@
   }
 
 
-  .chat__main{
+  &__main{
 
     height: calc(100vh - 147px - 90px);
     padding: 46px 40px 0;
     background-color: #fafafa;
     overflow: scroll;
-    .chat__main__message{
+    &__message{
       margin-bottom: 40px;
-      .chat__main__message__name{
+      &__name{
         font-weight: bold;
         display: inline;
         font-size: 16px;
         color: #434a54;
       }
       
-      .chat__main__message--gray{
+      &--gray{
         color: #999999;
         font-size: 12px;
         display: inline;
         padding-left: 10px;
       }
 
-      .chat__main__message__text{
+      &__text{
         margin-top: 10px;
         font-size: 14px;
         color: #434a54;
@@ -122,38 +121,37 @@
 
 
 
-  .chat__send-message{
+  &__send-message{
     background-color: #dddddd;
     width: 100%;
     height: 90px;
     float: right;
-    .chat__send-message__input{
+    &__input{
       padding: 20px 40px;  
       display: flex;
-      .chat__send-message__input__box{
+      &__box{
         height: 50px;
-        width: 100%;
-        
+        width: 100%; 
         background-color:#ffffff;
         line-height: 50px;
         display: flex;
         position: relative;
-        .chat__send-message__input__box__text{
+        &__text{
           width: 100%;
           color: #434a54;
           padding: 0 40px 0 10px;
         }
-        .chat__send-message__input__box__image{
+        &__image{
           position: absolute;
           font-size: 1.3rem;
           right: 10px;
           cursor: pointer;
-          .message-image{
+          &__icon{
             display: none;
           }
         }
       }
-      .chat__send-message__input__send{
+      &__btn{
         width: 100px;
         height: 50px;
         margin-left: 15px;
