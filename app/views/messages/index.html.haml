@@ -2,36 +2,4 @@
   グループを作成しました
 
 = render partial:"side-bar"
-
-
-.chat
-
-
-  .chat__current-group
-    .chat__current-group__name
-      current_group
-    = link_to "messages#index",class: "chat__current-group__edit-btn" do
-      Edit
-    .chat__current-group__member
-      Member: user1
-
-
-
-  .chat__main
-    .chat__main__message
-      .chat__main__message__name
-        user1
-      .chat__main__message--gray
-        2019/06/06(Tue) 00:00:00
-      .chat__main__message__text
-        message
-
-
-  %form{class: "chat__send-message"}
-    .chat__send-message__input
-      .chat__send-message__input__box
-        %input{placeholder: "type a message",class:"chat__send-message__input__box__text", type: "text"}  
-        %label.chat__send-message__input__box__image
-          %i.fa.fa-image.fa-1x
-          %input.chat__send-message__input__box__image__icon{type: "file"}
-      %input.chat__send-message__input__btn{type: "submit",value: "Send"}
+= render partial:"chat"
