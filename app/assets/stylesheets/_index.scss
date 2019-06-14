@@ -41,11 +41,13 @@
     height: calc(100vh - 100px);
     overflow-y: scroll;
     .side-bar__groups__list{
-      padding: 20px 20px 0;
+      padding: 20px ;
       font-size: 15px;
+      color: #ffffff;
       .side-bar__groups__list__message{
         font-size: 11px;
         padding-top: 5px;
+        color: inherit;
       }
     }
   }

@@ -12,22 +12,26 @@
         %i.fa.fa-cog
 
   .side-bar__groups
-    .side-bar__groups__list
-      group_1
-      .side-bar__groups__list__message
-        hello
-    .side-bar__groups__list
-      group_2
-      .side-bar__groups__list__message
-        goodbye
-    .side-bar__groups__list
-      group_2
-      .side-bar__groups__list__message
-        goodbye
-    .side-bar__groups__list
-      group_2
-      .side-bar__groups__list__message
-        goodbye
+    = link_to "messages#index" do    
+      .side-bar__groups__list
+        group_1
+        .side-bar__groups__list__message
+          hello
+    = link_to "messages#index" do 
+      .side-bar__groups__list
+        group_2
+        .side-bar__groups__list__message
+          goodbye
+    = link_to "messages#index" do 
+      .side-bar__groups__list
+        group_2
+        .side-bar__groups__list__message
+          goodbye
+    = link_to "messages#index" do 
+      .side-bar__groups__list
+        group_2
+        .side-bar__groups__list__message
+          goodbye
     
 
 .chat
