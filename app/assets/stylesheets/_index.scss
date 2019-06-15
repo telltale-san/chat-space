@@ -4,17 +4,17 @@
 
 
 .new-group-message{
-  background-color: #38aef0;
+  background-color: $accent-skyblue;
   width:100%;
   text-align: center;
-  color: #ffffff;
+  color: $font-white;
 }
 
 .side-bar{
   float: left;
   width: 300px;
   height: 100vh;
-  color: #ffffff;
+  color: $font-white;
   font-weight: bold;
   background-color: #2f3e51;
   &__user-name{
@@ -30,12 +30,12 @@
       float: right;
   &__new-group{
         display: inline;
-        color: #ffffff;
+        color: $font-white;
         text-decoration: none;
       }
   &__edit-user{
         display: inline;
-        color: #ffffff;
+        color: $font-white;
         }
       }
     }
@@ -46,7 +46,7 @@
     &__list{
       padding: 20px ;
       font-size: 15px;
-      color: #ffffff;
+      color: $font-white;
       &__message{
         font-size: 11px;
         padding-top: 5px;
@@ -62,7 +62,7 @@
   height: 100vh;
   width: calc(100vw - 300px);
   &__current-group{
-    background-color: #ffffff;
+    background-color: $font-white;
     height: 100px;
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
@@ -79,15 +79,15 @@
       padding: 0 20px;
       height: 40px;
       line-height: 40px;
-      color: #38aef0;
-      border: #38aef0 solid 1px;
+      color: $accent-skyblue;
+      border: $accent-skyblue solid 1px;
       cursor: pointer;
       text-decoration: none;
     }
     &__member{
       clear: both;
       font-size: 12px;
-      color: #999999;
+      color: $font-gray;
     } 
   }
 
@@ -104,11 +104,11 @@
         font-weight: bold;
         display: inline;
         font-size: 16px;
-        color: #434a54;
+        color: $font-text-gray;
       }
       
       &--gray{
-        color: #999999;
+        color: $font-gray;
         font-size: 12px;
         display: inline;
         padding-left: 10px;
@@ -117,7 +117,7 @@
       &__text{
         margin-top: 10px;
         font-size: 14px;
-        color: #434a54;
+        color: $font-text-gray;
       }
     } 
   }
@@ -135,13 +135,13 @@
       &__box{
         height: 50px;
         width: 100%; 
-        background-color:#ffffff;
+        background-color: $font-white;
         line-height: 50px;
         display: flex;
         position: relative;
         &__text{
           width: 100%;
-          color: #434a54;
+          color: $font-text-gray;
           padding: 0 40px 0 10px;
         }
         &__image{
@@ -159,8 +159,8 @@
         height: 50px;
         margin-left: 15px;
         padding: 0 30px;
-        background-color: #38aef0;
-        color: #ffffff;
+        background-color: $accent-skyblue;
+        color: $font-white;
         text-align: center;
         line-height: 50px;
         cursor: pointer;
