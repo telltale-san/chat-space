@@ -1,6 +1,6 @@
 .side-bar
   .side-bar__user-name
-    user_1
+    = current_user.name
     .side-bar__user-name__icons
       = link_to "#", class: "side-bar__user-name__icons__new-group" do
         %i.fa.fa-edit
