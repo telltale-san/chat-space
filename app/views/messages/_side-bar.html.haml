@@ -4,7 +4,7 @@
     .side-bar__user-name__icons
       = link_to "#", class: "side-bar__user-name__icons__new-group" do
         %i.fa.fa-edit
-      = link_to edit_user_registration_path,method: :get, class:"side-bar__user-name__icons__edit-user" do
+      = link_to edit_user_registration_path(current_user),method: :get, class:"side-bar__user-name__icons__edit-user" do
         %i.fa.fa-cog
 
   .side-bar__groups
