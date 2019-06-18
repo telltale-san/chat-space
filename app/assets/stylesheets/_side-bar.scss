@@ -31,14 +31,20 @@
   &__groups{
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    &__list{
-      padding: 20px ;
+    padding: 0 20px;
+    &__wrapper{
+      padding: 20px 0;
+    .side-bar__groups__list{
+      width: 100%;
       font-size: 15px;
       color: $font-white;
+      text-decoration: none;
       &__message{
         font-size: 11px;
         padding-top: 5px;
         color: inherit;
+        font-weight: 100;
+        }
       }
     }
   }
