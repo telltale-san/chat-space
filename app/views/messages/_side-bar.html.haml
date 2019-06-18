@@ -10,7 +10,7 @@
   .side-bar__groups
     - current_user.groups.each do |group|
       .side-bar__groups__wrapper
-        = link_to group_messages_path(group) ,class: "side-bar__groups__list" do
+        = link_to group_messages_path(group.id) ,class: "side-bar__groups__list" do
           = group.name
           .side-bar__groups__list__message
             メッセージはまだありません
