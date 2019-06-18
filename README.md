@@ -26,7 +26,7 @@ Things you may want to cover:
 # DB設計
 
 
-## membersテーブル
+## group_userテーブル
 
 |column|type|options|
 |------|----|-------|
@@ -47,9 +47,9 @@ Things you may want to cover:
 |e-mail|string|null: false, unique: true|
 
 ### Association
-has_many :groups, through: :members
+has_many :groups, through: :group_user
 has_many :messages
-has_many :members
+has_many :group_user
 
 ## groupsテーブル
 
@@ -58,9 +58,9 @@ has_many :members
 |name|string|null: false|
 
 ### Association
-has_many :users, through: :members
+has_many :users, through: :group_user
 has_many :messages
-has_many :members
+has_many :group_user
 
 
 ## messagesテーブル
