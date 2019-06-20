@@ -67,7 +67,7 @@ has_many :group_user
 
 |column|type|options|
 |------|----|-------|
-|body|text||
+|content|text||
 |image|string||
 |group|references|null: false,foriegn_key:true|
 |user|references|null: false,foriegn_key:true|
