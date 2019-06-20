@@ -2,30 +2,16 @@
   .side-bar__user-name
     = current_user.name
     .side-bar__user-name__icons
-      = link_to "#", class: "side-bar__user-name__icons__new-group" do
+      = link_to new_group_path,class: "side-bar__user-name__icons__new-group" do
         %i.fa.fa-edit
       = link_to edit_user_registration_path(current_user),method: :get, class:"side-bar__user-name__icons__edit-user" do
         %i.fa.fa-cog
 
   .side-bar__groups
-    = link_to "#" do    
-      .side-bar__groups__list
-        group_1
-        .side-bar__groups__list__message
-          hello
-    = link_to "#" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    = link_to "#" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    = link_to "#" do 
-      .side-bar__groups__list
-        group_2
-        .side-bar__groups__list__message
-          goodbye
-    
+    - current_user.groups.each do |group|
+      .side-bar__groups__wrapper
+        = link_to group_messages_path(group.id) ,class: "side-bar__groups__list" do
+          = group.name
+          .side-bar__groups__list__message
+            メッセージはまだありません
+ 
