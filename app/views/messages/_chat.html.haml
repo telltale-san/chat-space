@@ -12,13 +12,8 @@
 
 
   .chat__main
-    .chat__main__message
-      .chat__main__message__name
-        user1
-      .chat__main__message--gray
-        2019/06/06(Tue) 00:00:00
-      .chat__main__message__text
-        message
+    = render partial: "message" , collection: @messages
+
 
 
   .form
