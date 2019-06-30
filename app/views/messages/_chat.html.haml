@@ -7,25 +7,24 @@
     = link_to "messages",method: :get,class: "chat__current-group__edit-btn" do
       Edit
     .chat__current-group__member
-      Member: user1
+      Member: 
+      - @users.each do |user|
+        = user.name
+
 
 
 
   .chat__main
-    .chat__main__message
-      .chat__main__message__name
-        user1
-      .chat__main__message--gray
-        2019/06/06(Tue) 00:00:00
-      .chat__main__message__text
-        message
+    = render partial: "message" , collection: @messages
 
 
-  %form{class: "chat__send-message"}
-    .chat__send-message__input
-      .chat__send-message__input__box
-        %input{placeholder: "type a message",class:"chat__send-message__input__box__text", type: "text"}  
-        %label.chat__send-message__input__box__image
-          %i.fa.fa-image.fa-1x
-          %input.chat__send-message__input__box__image__icon{type: "file"}
-      %input.chat__send-message__input__btn{type: "submit",value: "Send"}
+
+  .form
+    = form_for [@group, @message] do |f| 
+      .form__wrapper   
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

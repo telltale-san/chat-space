@@ -62,51 +62,98 @@
       }
     } 
   }
+}
 
 
+.form{
+  background-color: #dddddd;
+  height: 90px;
+  width: calc(100vw - 300px);
+  float: right;
+  &__wrapper{
+    margin: 20px 40px;
+    .form__message{
+    float: left;    
+    color: $font-text-gray;
+    width: calc(100% - 20px - 100px - 5px); 
+    height: 50px;
+    padding: 0 0 0 10px;
+    border: none;
+    }
 
-  &__send-message{
-    background-color: #dddddd;
-    width: 100%;
-    height: 90px;
-    float: right;
-    &__input{
-      padding: 20px 40px;  
-      display: flex;
-      &__box{
-        height: 50px;
-        width: 100%; 
-        background-color: $font-white;
-        line-height: 50px;
-        display: flex;
-        position: relative;
-        &__text{
-          width: 100%;
-          color: $font-text-gray;
-          padding: 0 40px 0 10px;
-        }
-        &__image{
-          position: absolute;
+    .form__mask{
+      position: absolute;
+      right: 160px;
+      float: left;
+      height: 50px;
+      line-height: 55px;
+      &__image{
+        .icon{
           font-size: 1.3rem;
-          right: 10px;
-          cursor: pointer;
-          &__icon{
-            display: none;
-          }
+        }
+        .hidden{
+          display: none;
         }
       }
-      &__btn{
-        width: 100px;
-        height: 50px;
-        margin-left: 15px;
-        padding: 0 30px;
-        background-color: $accent-skyblue;
-        color: $font-white;
-        text-align: center;
-        line-height: 50px;
-        cursor: pointer;
-        box-sizing: border-box;
+    }
+  }
+  .form__submit{
+    width: 100px;
+    height: 50px;
+    margin: 0 0 0 15px;
+    padding: 0 30px;
+    background-color: $accent-skyblue;
+    color: $font-white;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 50px;
+    position: absolute;
+    right: 40px;
+  }
+}
+
+
+
+.message{
+  background-color: #dddddd;
+  width: 100%;
+  height: 90px;
+  float: right;
+  &__input{
+    padding: 20px 40px;  
+    display: flex;
+    &__box{
+      height: 50px;
+      width: 100%; 
+      background-color: $font-white;
+      line-height: 50px;
+      display: flex;
+      position: relative;
+      &__text{
+        width: 100%;
+        color: $font-text-gray;
+        padding: 0 40px 0 10px;
       }
+      &__image{
+        position: absolute;
+        font-size: 1.3rem;
+        cursor: pointer;
+        &__icon{
+          display: none;
+        }
+      }
+    }
+    &__btn{
+      width: 100px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      background-color: $accent-skyblue;
+      color: $font-white;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      box-sizing: border-box;
     }
   }
 }
