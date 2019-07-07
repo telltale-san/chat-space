@@ -5,3 +5,5 @@
     = message.created_at.strftime("%Y/%m/%d %H:%M")
   .chat__main__message__text
     = message.content
+    - if message.image?
+      = image_tag  message.image, size: "200x200"
