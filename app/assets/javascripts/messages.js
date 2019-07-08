@@ -41,6 +41,7 @@ $(function(){
     })
     .done(function(data){
       appendMessage(data);
+      $(".chat__main").animate({scrollTop: $(".chat__main")[0].scrollHeight},100,"swing");
     })
 
   });
