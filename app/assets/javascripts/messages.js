@@ -42,6 +42,7 @@ $(function(){
     .done(function(data){
       appendMessage(data);
       $(".form__message").val("");
+      $(".hidden").val("");
       $(".chat__main").animate({scrollTop: $(".chat__main")[0].scrollHeight},100,"swing");
       $(".form__submit").attr("disabled",false);
     })
