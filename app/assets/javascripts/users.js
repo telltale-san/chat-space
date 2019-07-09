@@ -13,10 +13,6 @@ $(function(){
   }
 
 
-
-
-
-
   $(".chat-group-form__input").on("keyup",function(){
     var input=$(this).val();
     
@@ -29,15 +25,20 @@ $(function(){
     .done(function(users){
       $("#user-search-result").empty();
       users.forEach(function(user){
-        console.log(user.id);  
         appendUserHTML(user);
       });
+      
+      $("#user-search-result").on("click",".user-search-add",function(){
+        console.log("hello");
+      });
+
     })
     .fail(function(){
       alert("ユーザー検索に失敗しました");
     })
-
-
   });
+  
+
+
 
 });
