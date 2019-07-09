@@ -4,9 +4,9 @@ $(function(){
 
   function appendUserHTML(user){
     var html=`
-    <div class="chat-group-user clearfix">
+    <div class="chat-group-user clearfix${user.id}">
       <p class="chat-group-user__name">${user.name}</p>
-      <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
+      <div class="user-search-add${user.id} chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
     </div>  
     `
     searchResult.append(html);
@@ -26,11 +26,12 @@ $(function(){
       $("#user-search-result").empty();
       users.forEach(function(user){
         appendUserHTML(user);
+        $("#user-search-result").on("click",`.user-search-add${user.id}`,function(){
+          $(`.chat-group-user.clearfix${user.id}`).remove();
+  
+        });
       });
       
-      $("#user-search-result").on("click",".user-search-add",function(){
-        console.log("hello");
-      });
 
     })
     .fail(function(){
