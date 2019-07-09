@@ -28,11 +28,13 @@ $(function(){
     })
     .done(function(users){
       $("#user-search-result").empty();
-      
       users.forEach(function(user){
         console.log(user.id);  
         appendUserHTML(user);
       });
+    })
+    .fail(function(){
+      alert("ユーザー検索に失敗しました");
     })
 
 
