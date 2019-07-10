@@ -43,14 +43,9 @@ $(function(){
       var currentUserId=$(".js-chat-member-current-user").attr("value");
 
       users.forEach(function(user){
-        if(user.id==currentUserId){
-          
-        }else{
-          appendUserHTML(user);
-        }
-        
+          appendUserHTML(user);        
       });
-      
+
     })
     .fail(function(){
       alert("ユーザー検索に失敗しました");
