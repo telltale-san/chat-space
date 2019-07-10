@@ -8,7 +8,7 @@ $(function(){
     var image = message.image ? `<img src="${ message.image }" width="200" height="200">` : "";
  
     var html =`
-    <div class="chat__main__message">
+    <div class="chat__main__message" data-message-id="${message.id}">
       <div class="chat__main__message__name">
         ${message.user_name}
       </div>
