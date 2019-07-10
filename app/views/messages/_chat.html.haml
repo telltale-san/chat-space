@@ -4,7 +4,7 @@
   .chat__current-group
     .chat__current-group__name
       = @group.name
-    = link_to "messages",method: :get,class: "chat__current-group__edit-btn" do
+    = link_to edit_group_path(params[:group_id]),method: :get,class: "chat__current-group__edit-btn" do
       Edit
     .chat__current-group__member
       Member: 
