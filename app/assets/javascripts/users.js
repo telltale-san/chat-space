@@ -41,7 +41,7 @@ $(function(){
     .done(function(users){
       $("#user-search-result").empty();
       var currentUserId=$(".js-chat-member-current-user").attr("value");
-      console.log(currentUserId);
+
       users.forEach(function(user){
         if(user.id==currentUserId){
           
