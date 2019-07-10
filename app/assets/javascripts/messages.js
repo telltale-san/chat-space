@@ -5,7 +5,7 @@ $(function(){
 
   function appendMessage(message){
     var content = message.content ? `${ message.content }` : "";
-    var image = message.image ? `<img src="${ message.image }" width="200" height="200">` : "";
+    var image = message.image.url ? `<img src="${ message.image.url }" width="200" height="200">` : "";
  
     var html =`
     <div class="chat__main__message" data-message-id="${message.id}">
@@ -25,10 +25,30 @@ $(function(){
   };
 
 
+  var reloadMessages = function() {
+    var last_message_id = $(".chat__main__message").last().data("message-id");
+    $.ajax({
+      //ルーティングで設定した通りのURLを指定
+      url: "/groups/:group_id/api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
+
+
+
+
 
   $(".new_message").on("submit",function(e){
     e.preventDefault();
-
+    
     var formData= new FormData(this);
     var url= $(this).attr("action");
     $.ajax({
@@ -44,10 +64,15 @@ $(function(){
       $(".new_message")[0].reset();
       $(".chat__main").animate({scrollTop: $(".chat__main")[0].scrollHeight},100,"swing");
       $(".form__submit").attr("disabled",false);
+
     })
     .fail(function(){
       window.alert("メッセージを送信できませんでした…");
       $(".form__submit").attr("disabled",false);
     })
   });
+
+
+
+
 });
