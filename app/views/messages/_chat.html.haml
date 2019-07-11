@@ -2,7 +2,7 @@
 
 
   .chat__current-group
-    .chat__current-group__name
+    .chat__current-group__name(data-group-id="#{@group.id}")
       = @group.name
     = link_to edit_group_path(params[:group_id]),method: :get,class: "chat__current-group__edit-btn" do
       Edit
