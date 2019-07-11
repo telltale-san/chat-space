@@ -1,7 +1,7 @@
 class Api::MessagesController < ApplicationController
   def index
     @message=Message.new(messages_param)
-    @messages=Message.where(group_id:"#{@message.group_id}",id:@message.id+1..Float::INFINITY)
+    @messages=Message.where("group_id = ? and id > ?", @message.group_id, @message.id)
 
   end
 
