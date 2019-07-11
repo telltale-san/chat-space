@@ -29,14 +29,12 @@ $(function(){
     var groupId=$(".chat__current-group__name").data("group-id");
     var last_message_id = $(".chat__main__message").last().data("message-id");
     $.ajax({
-      //ルーティングで設定した通りのURLを指定
       url: `/groups/${groupId}/api/messages`,
       type: 'GET',
       dataType: 'json',
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages);
       messages.forEach(function(message){
         appendMessage(message);
         $(".chat__main").animate({scrollTop: $(".chat__main")[0].scrollHeight},100,"swing");
@@ -75,6 +73,15 @@ $(function(){
     })
   });
 
-  setInterval(reloadMessages, 5000);
 
+    var groupId=$(".chat__current-group__name").data("group-id");
+    var path=location.pathname;
+    if(path == `/groups/${groupId}/messages`){
+      setInterval(reloadMessages, 5000);
+    }else{
+
+    }
+
+
+  
 });
