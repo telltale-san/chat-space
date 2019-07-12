@@ -31,7 +31,7 @@ $(function(){
 
   $(".chat-group-form__input").on("keyup",function(){
     var input=$(this).val();
-
+    
     $.ajax({
       type: "GET",
       url: "/users",
