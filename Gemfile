@@ -69,3 +69,7 @@ gem "devise"
 
 gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 gem "mini_magick"
+
+group :production do
+  gem "unicorn", "5.4.1"
+end
