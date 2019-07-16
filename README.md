@@ -75,3 +75,7 @@ has_many :group_user
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+
+
+<!-- test -->
