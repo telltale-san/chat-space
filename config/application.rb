@@ -19,5 +19,6 @@ module ChatSpace
 
     end
 
+  config.time_zone="Japan"
   end
 end
